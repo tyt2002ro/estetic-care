@@ -11,11 +11,11 @@ jobs:
     - uses: actions/checkout@v2.1.0
       with:
        fetch-dept: 2
-       local-dir: ./estetic-care.ro/
-       server-dir: public_html/
     - name: FTP-Deploy-Action
       uses: SamKirkland/Ftp-Deploy-Action@3.1.1
       with:
         ftp-server: ${{ secrets.FTP_SERVER }}
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./estetic-care.ro/
+        server-dir: public_html/

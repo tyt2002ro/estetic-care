@@ -87,3 +87,8 @@ RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]
 
 # 7. disable open_basedir limitations
 # php_admin_value open_basedir none
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} estetic-care\.ro [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://estetic-care.ro/$1 [R,L]
